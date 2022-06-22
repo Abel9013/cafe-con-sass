@@ -1,0 +1,26 @@
+1) npm init  
+Este package.json me permite ejecutar scripts de npm, y tambien me permite almacenar las dependencias.
+2) Instalo gulp (gulp -v para revisar mi version, local version: unkown =>Debp instalar version local)	
+   Instalo gulp localmente(dependencia de desarrollo): npm i --save-dev gulp 
+3) Creo el archivo gulpfile.js
+----------Creando tareas en gulpfile(funciones)----------
+ 			
+
+			function tarea(done) {
+  				console.log("Desde mi primer tarea");
+  				done();
+			}
+
+			exports.primerTarea = tarea;
+
+Despues del exports va el nombre de llamado de la funcion(gulp primerTarea)
+
+creo carpeta -src- => -scss-
+creo archivo app.scss(-src-.-scss-.app.scss)
+
+4) Instalo npm i --save-dev sass gulp-sass
+5) instalo npm i --save-dev autoprefixer gulp-postcss
+	Con estas dos dependencias podemos escribir codigo de ultima generacion en css y nos va a cear versiones compatibles para navegadores que no la soportan.
+
+6) Creo la carpeta header en scss. En ella el archivo _header.scss(guion bajo xq es un archivo que sera incluido en otro).
+Por cada hoja de estilos que creo debo incluirla en el app.scss principal a traves de @use "direccionArchivo";
